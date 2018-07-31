@@ -1,0 +1,46 @@
+{% extends "root.html" %}
+
+{% block title %}{{title}}{% endblock %}
+
+
+{% block header %}
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a href="{{constant('BASEURL')}}index.php" class="navbar-brand">CRUD</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"> Clientes <span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="/monitoria/public/customers">Gerenciar Clientes</a></li>
+							<li><a href="/monitoria/public/customers/add">Novo Cliente</a></li>
+						</ul></li>
+				</ul>
+			</div>
+			<!--/.navbar-collapse -->
+		</div>
+	</nav>
+{% endblock %}
+
+
+{% block footer %}
+    <footer class="container navbar-fixed-bottom">
+		<hr>
+		<p>&copy;2016 - Web Dev Academy</p>
+	</footer>
+	<script	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="<?php echo ASSETS; ?>js/jquery-1.11.2.min.js"><\/script>')</script>
+	<script src="{{constant('ASSETS')}}js/bootstrap.min.js"></script>
+	<script src="{{constant('ASSETS')}}js/main.js"></script>
+{% endblock %}
